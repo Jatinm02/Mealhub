@@ -16,7 +16,7 @@ const Shop = () => {
     async function fetchData() {
       try {
         //backend conecting 
-        const response = await axios.get(`http://localhost:3001/api/dishes`);
+        const response = await axios.get(`https://mealhub-five.vercel.app/api/dishes`);
         console.log(response.data);
         setProduct(response.data);
         setFoodOnly(response.data.filter((item) => item.category === "food"));
